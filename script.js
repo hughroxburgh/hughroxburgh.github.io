@@ -27,14 +27,24 @@ function closeCard(button) {
   const detail = button.nextElementSibling;
   detail.style.maxHeight = null;
   button.setAttribute('aria-expanded', 'false');
-  button.querySelector('.expand-hint').textContent = '+ read more';
 }
 
 function openCard(button) {
   const detail = button.nextElementSibling;
   detail.style.maxHeight = detail.scrollHeight + 'px';
   button.setAttribute('aria-expanded', 'true');
-  button.querySelector('.expand-hint').textContent = '– close';
+
+  // Images load asynchronously — recheck height once each one is ready
+  // so the panel doesn't clip figures before they've loaded.
+  detail.querySelectorAll('img').forEach(img => {
+    if (!img.complete) {
+      img.addEventListener('load', () => {
+        if (button.getAttribute('aria-expanded') === 'true') {
+          detail.style.maxHeight = detail.scrollHeight + 'px';
+        }
+      });
+    }
+  });
 }
 
 researchToggles.forEach(button => {
