@@ -195,7 +195,6 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
   .timeline-list li{ grid-template-columns: 5.5rem 1fr; }
 }
 
-
 .avatar{
   width: 160px;
   height: 200px;
