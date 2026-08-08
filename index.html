@@ -74,9 +74,9 @@
       <h3><span class="mono num">02</span> Research</h3>
       <div class="block-body">
         <p class="lead">Here's what I focus on or something...</p>
-        <div class="research-grid">
-          <article class="research-card">
-            <button class="research-toggle" aria-expanded="false">
+        <div class="research-block">
+          <div class="research-row">
+            <button class="research-card" data-target="rd-1" aria-expanded="false">
               <span class="research-toggle-head">
                 <span class="mono card-tag">theme — 01</span>
                 <span class="research-arrow" aria-hidden="true">→</span>
@@ -84,20 +84,7 @@
               <h4>FRBs as Baryonic Probes</h4>
               <p>Something like this.</p>
             </button>
-            <div class="research-detail">
-              <div class="research-detail-inner">
-                <p>Expand this with the real detail: the specific question you're asking, the data or systems you work with, the methods you use, and why the problem is hard or interesting.</p>
-                <!-- Example figure — replace src and caption, or duplicate for more -->
-                <figure>
-                  <img src="figure1.jpg" alt="Describe the figure here">
-                  <figcaption>Caption describing the figure — e.g. what it shows and why it's relevant.</figcaption>
-                </figure>
-                <p>Continue with more detail after the figure if needed.</p>
-              </div>
-            </div>
-          </article>
-          <article class="research-card">
-            <button class="research-toggle" aria-expanded="false">
+            <button class="research-card" data-target="rd-2" aria-expanded="false">
               <span class="research-toggle-head">
                 <span class="mono card-tag">theme — 02</span>
                 <span class="research-arrow" aria-hidden="true">→</span>
@@ -105,17 +92,33 @@
               <h4>The TESSELLATE Sky Survey</h4>
               <p>One of the largest volume blind surveys conducted in the optical. </p>
             </button>
-            <div class="research-detail">
-              <div class="research-detail-inner">
-                <p>Replace with the expanded detail for this thread — methods, key findings so far, open questions you're pursuing, or collaborators involved.</p>
-              </div>
+            <!-- <button class="research-card" data-target="rd-3" aria-expanded="false">
+              <span class="research-toggle-head">
+                <span class="mono card-tag">theme — 03</span>
+                <span class="research-arrow" aria-hidden="true">→</span>
+              </span>
+              <h4>Open ecological data</h4>
+              <p>A third thread, or delete if you only have two themes.</p>
+            </button> -->
+          </div>
+
+          <div class="research-detail" id="rd-1">
+            <div class="research-detail-inner">
+              <p>Expand this with the real detail: the specific question you're asking, the data or systems you work with, the methods you use, and why the problem is hard or interesting.</p>
+              <!-- Example figure — replace src and caption, or duplicate for more -->
+              <figure>
+                <img src="figure1.jpg" alt="Describe the figure here">
+                <figcaption>Caption describing the figure — e.g. what it shows and why it's relevant.</figcaption>
+              </figure>
+              <p>Continue with more detail after the figure if needed.</p>
             </div>
-          </article>
-          <!-- <article class="research-card">
-            <p class="mono card-tag">theme — 03</p>
-            <h4>Open ecological data</h4>
-            <p>A third thread, or delete this card if your work centres on two themes rather than three.</p>
-          </article> -->
+          </div>
+
+          <div class="research-detail" id="rd-2">
+            <div class="research-detail-inner">
+              <p>Replace with the expanded detail for this thread — methods, key findings so far, open questions you're pursuing, or collaborators involved.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -216,6 +219,6 @@
   </main>
 </div>
 
-<script src="script.js"></script>
+<script src="script.js?v=1001" defer></script>
 </body>
 </html>

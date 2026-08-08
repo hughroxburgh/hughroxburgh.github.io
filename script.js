@@ -20,17 +20,21 @@ nav.querySelectorAll('a').forEach(link => {
   });
 });
 
-// Expandable research cards — accordion (only one open at a time)
-const researchToggles = document.querySelectorAll('.research-toggle');
+// Research cards — buttons in a row, detail panels expand full-width below
+const researchButtons = document.querySelectorAll('.research-card');
 
-function closeCard(button) {
-  const detail = button.nextElementSibling;
+function closeDetail(button) {
+  const detail = document.getElementById(button.dataset.target);
+  if (!detail) return;
   detail.style.maxHeight = null;
+  detail.classList.remove('open');
   button.setAttribute('aria-expanded', 'false');
 }
 
-function openCard(button) {
-  const detail = button.nextElementSibling;
+function openDetail(button) {
+  const detail = document.getElementById(button.dataset.target);
+  if (!detail) return;
+  detail.classList.add('open');
   detail.style.maxHeight = detail.scrollHeight + 'px';
   button.setAttribute('aria-expanded', 'true');
 
@@ -47,16 +51,16 @@ function openCard(button) {
   });
 }
 
-researchToggles.forEach(button => {
+researchButtons.forEach(button => {
   button.addEventListener('click', () => {
     const isOpen = button.getAttribute('aria-expanded') === 'true';
 
-    // Close every card first
-    researchToggles.forEach(closeCard);
+    // Close every button/panel first
+    researchButtons.forEach(closeDetail);
 
     // Reopen this one only if it wasn't already open
     if (!isOpen) {
-      openCard(button);
+      openDetail(button);
     }
   });
 });
