@@ -180,15 +180,14 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
 .research-detail{
   max-height: 0;
   overflow: hidden;
-  transition: max-height .35s ease;
+  margin-top: 0;
+  transition: max-height .35s ease, margin-top .35s ease;
   background: var(--paper-raised);
-  border: 0 solid var(--accent);
-  border-width: 0 1px;
+  border: 1px solid transparent;
 }
 .research-detail.open{
-  border-bottom-width: 1px;
-  border-left-width: 1px;
-  border-right-width: 1px;
+  margin-top: 1.4rem;
+  border-color: var(--accent);
 }
 .research-detail-inner{
   padding: 1.4rem 1.5rem 1.8rem;
