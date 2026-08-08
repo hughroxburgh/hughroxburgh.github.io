@@ -157,13 +157,15 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
   margin: 0;
   cursor: pointer;
   font-family: inherit;
+  position: relative;
+  z-index: 1;
   transition: border-color .2s ease;
 }
 .research-card:hover h4{ color: var(--accent); }
 .research-card[aria-expanded="true"]{
   border-color: var(--accent);
   border-bottom-color: transparent;
-  position: relative;
+  margin-bottom: -1px;
   z-index: 2;
 }
 
@@ -189,7 +191,7 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
   transition: max-height .35s ease;
   background: var(--paper-raised);
   border: 1px solid transparent;
-  border-top: none;
+  border-top: 1px solid var(--line);
 }
 .research-detail.open{
   border-color: var(--accent);
