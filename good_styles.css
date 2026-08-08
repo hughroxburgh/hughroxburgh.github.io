@@ -160,12 +160,7 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
   transition: border-color .2s ease;
 }
 .research-card:hover h4{ color: var(--accent); }
-.research-card[aria-expanded="true"]{
-  border-color: var(--accent);
-  border-bottom-color: transparent;
-  position: relative;
-  z-index: 2;
-}
+.research-card[aria-expanded="true"]{ border-color: var(--accent); }
 
 .research-toggle-head{
   display:flex; align-items:center; justify-content:space-between;
@@ -186,12 +181,12 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
   max-height: 0;
   overflow: hidden;
   margin-top: 0;
-  transition: max-height .35s ease;
+  transition: max-height .35s ease, margin-top .35s ease;
   background: var(--paper-raised);
   border: 1px solid transparent;
-  border-top: none;
 }
 .research-detail.open{
+  margin-top: 1.4rem;
   border-color: var(--accent);
 }
 .research-detail-inner{
