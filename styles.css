@@ -145,7 +145,7 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
 
 /* Research: small cards in a row, expanding panel spans full width below */
 .research-block{ margin-top: 1.6rem; }
-.research-row{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.research-row{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-bottom: 1.4rem; }
 
 .research-card{
   display:block;
@@ -165,8 +165,21 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
 .research-card[aria-expanded="true"]{
   border-color: var(--accent);
   border-bottom-color: transparent;
-  margin-bottom: -1px;
   z-index: 2;
+}
+/* Bridges the gap between the selected card and the panel below,
+   so it reads as one continuous shape while other cards stay separate. */
+.research-card[aria-expanded="true"]::after{
+  content: "";
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  bottom: -1.4rem;
+  height: 1.4rem;
+  background: var(--paper-raised);
+  border-left: 1px solid var(--accent);
+  border-right: 1px solid var(--accent);
+  z-index: 3;
 }
 
 .research-toggle-head{
