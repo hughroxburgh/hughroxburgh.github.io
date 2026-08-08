@@ -194,3 +194,14 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
   .pub{ grid-template-columns: 2.2rem 1fr; }
   .timeline-list li{ grid-template-columns: 5.5rem 1fr; }
 }
+
+
+.avatar{
+  width: 108px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  display: block;
+  margin: 0 0 1.4rem;
+}
