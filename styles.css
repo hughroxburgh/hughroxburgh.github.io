@@ -133,7 +133,7 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
 }
 .block h3 .num{ color: var(--accent); font-size: .85rem; }
 
-.block-body p{ margin: 0 0 1rem; color: var(--ink); max-width: 80ch; }
+.block-body p{ margin: 0 0 1rem; color: var(--ink); max-width: 70ch; }
 .lead{ color: var(--ink-soft) !important; }
 
 .fact-strip{
@@ -220,7 +220,7 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
 .research-detail-inner{
   padding: 1.4rem 1.5rem 1.8rem;
 }
-.research-detail-inner p{ font-size: .95rem; color: var(--ink); margin: 0 0 1rem; }
+.research-detail-inner p{ font-size: .95rem; color: var(--ink); max-width: none; margin: 0 0 1rem; }
 .research-detail-inner figure{
   margin: 1.4rem 0;
   max-width: 640px;
