@@ -145,7 +145,7 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
 
 /* Research: small cards in a row, expanding panel spans full width below */
 .research-block{ margin-top: 1.6rem; }
-.research-row{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-bottom: 1.4rem; }
+.research-row{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-bottom: 22px; }
 
 .research-card{
   display:block;
@@ -168,14 +168,15 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
   z-index: 2;
 }
 /* Bridges the gap between the selected card and the panel below,
-   so it reads as one continuous shape while other cards stay separate. */
+   overlapping 1px into each so no seam shows regardless of rounding. */
 .research-card[aria-expanded="true"]::after{
   content: "";
   position: absolute;
   left: -1px;
   right: -1px;
-  bottom: -1.4rem;
-  height: 1.4rem;
+  top: 100%;
+  margin-top: -1px;
+  height: calc(22px + 2px);
   background: var(--paper-raised);
   border-left: 1px solid var(--accent);
   border-right: 1px solid var(--accent);
@@ -204,7 +205,6 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
   transition: max-height .35s ease;
   background: var(--paper-raised);
   border: 1px solid transparent;
-  border-top: 1px solid var(--line);
 }
 .research-detail.open{
   border-color: var(--accent);
