@@ -151,6 +151,7 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
 .research-card{
   display:block;
   width: 100%;
+  height: 100%;
   text-align: left;
   background: var(--paper-raised);
   border: 1px solid var(--line);
@@ -174,8 +175,8 @@ main{ padding: 2.4rem 3rem 4rem; max-width: 880px; }
    pseudo-element on the button) so it isn't clipped by the button. */
 .research-connector{
   position: absolute;
-  left: -1px;
-  right: -1px;
+  left: 0;
+  right: 0;
   top: 100%;
   margin-top: -1px;
   height: calc(22px + 2px);
